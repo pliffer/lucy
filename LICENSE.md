@@ -1,0 +1,1 @@
+(c) Copyright 2020 pliffer.com, all rights reserved.

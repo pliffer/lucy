@@ -1,0 +1,146 @@
+/* @version 8 de janeiro, 2020 */
+
+.alerts-js.o-modal{
+    position: fixed;
+    background: white;
+    padding: 20px;
+    border: 1px solid #d0d0d0;
+    z-index: 10000;
+    height: unset !important;
+    width: unset !important;
+}
+
+.o-modal.focused-modal{
+    border-color: #888888;
+    z-index: 10001;
+}
+
+.modal-tab{
+    display: inline-block;
+    background: transparent;
+    padding: 4px 10px;
+    font-size: 0.9em;
+    margin: -5px 5px;
+    cursor: pointer;
+    position: relative;
+    color: #545454;
+}
+
+.modal-tab:after {
+    content: "";
+    border-bottom: 2px solid #d6d6d6;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    transition: 300ms ease;
+}
+
+.modal-tab.focused-tab{
+    color: black;
+}
+
+.modal-tab.focused-tab:after{
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+}
+
+.modal-tab.maximize{
+    background: #d6d6d6;
+    cursor: s-resize;
+}
+
+.o-modal .hidden{
+    display: none;
+}
+
+.o-modal hr{
+    width: 20%;
+    border: none;
+    border-bottom: 4px solid #e2e2e2;
+    margin: 10px 0 15px;
+}
+
+.o-modal button{
+    background: #d0d0d0;
+    border: none;
+    padding: 5px 8px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.o-modal button:hover{
+    background: #00d600;
+}
+
+.o-modal.modal-minimized{
+    display: none;
+}
+
+div.notifica{
+    padding: 22px 45px;
+    background: rgb(255, 23, 108);
+    position: fixed;
+    bottom: 21px;
+    opacity: 0.9;
+    right: 20px;
+    color: black;
+    font: 14px Courier;
+    letter-spacing: -.1px;
+    width: 310px;
+    transition: 300ms all;
+    z-index: 100000;
+}
+
+div.notifica small{
+    margin-top: 10px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+div.notifica button {
+    border: 0;
+    padding: 6px 10px;
+    background: #9a2646;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+div.notifica img{
+    width: 100%;
+}
+
+div.notifica.ldesatived{
+  transform:translateY(calc(-100% - 50px));
+  opacity:0
+}
+
+.o-modal .action-area{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin: 0px;
+    font-size: 1.6em;
+}
+
+.o-modal .action-area .min{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    top: -8px;
+    cursor: pointer;
+}
+
+.o-modal .action-area .close{
+    display: inline-block;
+    cursor: pointer;
+}
+
+div.notifica.pointer{
+    width: unset !important;
+    bottom: unset !important;
+    right: unset !important;
+}

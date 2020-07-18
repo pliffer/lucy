@@ -1,0 +1,9 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Lucy</ShortName>
+<Description>Inserir em lucy</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Url type="text/html" method="get" template="http://localhost:8989/">
+<Param name="search" value="{searchTerms}"/>
+</Url>
+<moz:SearchForm>http://localhost:8989/</moz:SearchForm>
+</OpenSearchDescription>

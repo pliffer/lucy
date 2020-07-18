@@ -1,0 +1,40 @@
+.filedialogs{
+    width: 100%;
+    height: 100%;
+    background: #039bff82;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.openfiledialogs .filedialogs{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.filedialogs .droparea{
+    border: 5px dashed #356c97;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.filedialogs .droparea input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.filedialogs h1, .filedialogs .destination{
+    text-align: center;
+    color: white;
+    font-family: calibri;
+}

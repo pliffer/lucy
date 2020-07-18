@@ -1,0 +1,28 @@
+//- Arquivo responsável por ler todos os arquivos css nas pastas especificadas
+if global.config.state === 'development'
+    -
+        var fs = require('fs');
+
+        function readFiles(src){
+            var files = fs.readdirSync(global.dir.app + src);
+
+            var aux = [];
+
+            files.forEach(function(file){
+                if(file.substr(-3)=='.js' || file.substr(-4)=='.css') aux.push(file);
+            });
+
+            return aux;
+        }
+
+    for file in readFiles('/assets/vendor/css')
+        link(rel="stylesheet", type="text/css", href="/vendor/css/" + file)
+
+    for file in readFiles('/assets/css')
+        link(rel="stylesheet", type="text/css", href="/css/" + file)
+
+    for file in readFiles('/assets/css/page')
+        link(rel="stylesheet", type="text/css", href="/css/page/" + file)
+
+else
+    link(rel="stylesheet", type="text/css", href="/css/build/main.min.css")

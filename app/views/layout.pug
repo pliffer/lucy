@@ -1,0 +1,104 @@
+doctype
+html
+
+    head
+
+        meta(charset="utf-8")
+
+        title Lucy
+
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        //- link(rel="search", type="application/opensearchdescription+xml", href="/xml/opensearch.xml?version=1", title=process.env.APP_NAME)
+
+        link(rel="shortcut icon", href="/img/favicon.png?version=1")
+
+        include inc/css
+
+    body.home.loading
+
+        .filedialogs
+
+            br
+            br
+            h1 Solte o arquivo dentro da linha pontilhada
+            .droparea
+                input(type="file", onchange="Filedialog.upload(this)", multiple)
+            h4.destination
+            p.center
+                button(onclick="Filedialog.close()") Cancelar
+
+        .menu
+
+            img(src="/img/favicon.png")
+
+            p
+                input.lucy-title(placeholder="Título da página", oninput="Lucy.titleKeydown(event)")
+
+            hr
+
+            p
+                input.input-pl(placeholder="$", onkeydown="Menu.input(event)")
+
+            .btn-list
+
+        .loading-overlay
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            img(src="/img/lucy.gif")
+
+            p
+                img(src="/img/owner.png")
+
+        .modals(style="display: none")
+            .modal.new-command
+
+                h1 Novo comando
+
+                p
+                    span $ 
+                    span(data-value="command")
+
+                p
+                    textarea(placeholder="Comando a ser executado")
+
+                p
+                    button(data-command="criar") Criar
+
+            .modal.edit-command
+
+                h1 Editar comando
+
+                p
+                    span $ 
+                    span(data-value="command")
+
+                p
+                    textarea(placeholder="Nova ação do comando")
+
+                p
+                    button(data-command="editar") Editar
+
+
+        #terminal
+
+        //- .login-holder
+
+        //-     .auth
+        //-         h1 Login
+        //-         p
+        //-             input.login(placeholder="Usuário", name="mail")
+        //-         p
+        //-             input.senha(placeholder="Senha", type="password", name="pass")
+        //-         p
+        //-             button(onclick="Login.auth()") Entrar
+
+        include inc/js
