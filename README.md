@@ -5,11 +5,9 @@ Para iniciar o servidor instale os pacotes:
 
 $ npm install
 
-Copie .env.EXAMPLE e chame de .env, ou faça isso num terminal UNIX:
+Crie o arquivo .env levando .env.EXAMPLE como modelo:
 
 $ cp .env.EXAMPLE ./.env
-
-Abra o arquivo .env e coloque sua senha(ou deixe em branco caso não possua)
 
 Recomenda-se o nodemon para testes em debug e pm2 para deploy online
 
